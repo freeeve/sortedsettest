@@ -1,5 +1,5 @@
 package main
 
 import (
-	_ "github.com/wfreeman/typewriters/container"
+	_ "github.com/wfreeman/typewriters/sortedcontainer"
 )

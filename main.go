@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 // +gen containers:"SortedSet,Set"
 type Id int32

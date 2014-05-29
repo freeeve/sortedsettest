@@ -15,12 +15,10 @@ func Test(t *testing.T) {
 }
 
 func (s *IdSortedSetBenchSuite) BenchmarkAdd(c *C) {
-	/*
-		ss := NewIdSortedSet(func(a, b Id) bool { return a < b })
-		i := 0
-		for ; i < c.N; i++ {
-			ss.Add(Id(i))
-		}
-		c.Assert(ss.Cardinality(), Equals, i)
-	*/
+	ss := NewIdSortedSet(func(a, b Id) bool { return a < b })
+	i := 0
+	for ; i < c.N; i++ {
+		ss.Add(Id(i))
+	}
+	c.Assert(ss.Cardinality(), Equals, i)
 }

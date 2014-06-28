@@ -1,6 +1,7 @@
 package main
 
 import (
+	"math/rand"
 	"testing"
 	. "github.com/wfreeman/check"
 )
@@ -14,20 +15,22 @@ func Test(t *testing.T) {
 	TestingT(t)
 }
 
+var r = rand.New(rand.NewSource(123123))
+
 func (s *IdSortedSetBenchSuite) BenchmarkAddSet(c *C) {
-	ss := NewIdSet()
-	i := 0
-	for ; i < c.N; i++ {
-		ss.Add(Id(i))
+	//	ss := NewIdSet()
+	i := c.N
+	for ; i > 0; i-- {
+		//		ss.Add(Id(i))
 	}
-	c.Assert(ss.Cardinality(), Equals, i)
+	//c.Assert(ss.Cardinality(), Equals, i)
 }
 
 func (s *IdSortedSetBenchSuite) BenchmarkAddSortedSet(c *C) {
-	ss := NewIdSortedSet(func(a, b Id) bool { return a < b })
-	i := 0
-	for ; i < c.N; i++ {
-		ss.Add(Id(i))
+	//	ss := NewIdSortedSet(func(a, b Id) bool { return a < b })
+	i := c.N
+	for ; i > 0; i-- {
+		//		ss.Add(Id(i))
 	}
-	c.Assert(ss.Cardinality(), Equals, i)
+	//c.Assert(ss.Cardinality(), Equals, i)
 }

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// +gen containers:"SortedSet,Set"
+// +gen containers:"SortedSet,Set,List"
 type Id int32
 
 func main() {
